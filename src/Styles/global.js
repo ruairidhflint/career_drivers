@@ -68,6 +68,14 @@ a {
 .App{
   max-width: 80vw;
   margin: 0 auto;
+
+  @media(max-width: 650px){
+      max-width: 95vw;
+  }
+
+  @media(max-width: 380px){
+      max-width: 98vw;
+  }
 }
 `;
 
