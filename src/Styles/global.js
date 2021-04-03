@@ -27,6 +27,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -39,7 +40,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	font-size: 62.5%;
     line-height: 1;
-    box-sizing: border-box;
     min-height: 100vh;
     font-family: 'Quicksand', sans-serif;
     color: ${(props) => props.theme.black};

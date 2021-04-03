@@ -83,7 +83,7 @@ const StyledLandingContainer = styled.div`
   }
 
   h1 {
-    font-size: 10rem;
+    font-size: 9rem;
     max-width: 500px;
     padding: 2rem;
 
@@ -105,7 +105,7 @@ const StyledLandingContainer = styled.div`
   }
 
   p {
-    font-size: 3rem;
+    font-size: 2.8rem;
     max-width: 800px;
     padding: 0 2rem;
     color: ${(props) => props.theme.lightgrey};
@@ -123,22 +123,21 @@ const StyledLandingContainer = styled.div`
 
 const StyledInfoContainer = styled.div`
   width: 100%;
-  min-height: 90vh;
-  margin-bottom: 9vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 5rem;
+  padding-top: 4rem;
 
   @media (max-width: 600px) {
     align-items: center;
   }
 
   p {
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding: 2rem 0;
     width: 65%;
-    line-height: 2.8rem;
+    line-height: 2.5rem;
 
     @media (max-width: 900px) {
       font-size: 1.8rem;
@@ -158,10 +157,10 @@ const StyledInfoContainer = styled.div`
   a {
     max-width: 200px;
     font-size: 1.8rem;
-    margin-top: 6rem;
+    margin-top: 4rem;
     color: ${(props) => props.theme.lightgrey};
     transition: 0.2s color ease-in-out;
-
+    margin-bottom: 2rem;
     :hover {
       color: ${(props) => props.theme.black};
       transition: 0.2s color ease-in-out;
