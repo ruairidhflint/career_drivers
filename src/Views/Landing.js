@@ -40,7 +40,7 @@ const Landing = () => {
           This assessment provides a simple and short framework to understand what are your career drivers and hopefully
           some clarity as to what a future path towards fullfillment will look like.
         </p>
-        <Link to="/assessment">Take the Assessment →</Link>
+        <Link to="/instructions">Take the Assessment →</Link>
       </StyledInfoContainer>
     </>
   );
@@ -134,14 +134,14 @@ const StyledInfoContainer = styled.div`
   }
 
   p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 2rem 0;
     width: 65%;
-    line-height: 2.5rem;
+    line-height: 2.2rem;
 
     @media (max-width: 900px) {
-      font-size: 1.8rem;
-      line-height: 2.4rem;
+      font-size: 1.6rem;
+      line-height: 2rem;
     }
 
     @media (max-width: 600px) {
@@ -150,13 +150,13 @@ const StyledInfoContainer = styled.div`
 
     @media (max-width: 400px) {
       font-size: 1.4rem;
-      line-height: 2rem;
+      line-height: 1.8rem;
     }
   }
 
   a {
     max-width: 200px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-top: 4rem;
     color: ${(props) => props.theme.lightgrey};
     transition: 0.2s color ease-in-out;
@@ -167,11 +167,11 @@ const StyledInfoContainer = styled.div`
     }
 
     @media (max-width: 900px) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
     @media (max-width: 400px) {
       font-size: 1.2rem;
-      line-height: 1.8rem;
+      line-height: 1.5rem;
     }
   }
 `;

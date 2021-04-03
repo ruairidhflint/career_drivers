@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import GlobalStyle from './Styles/global';
 import { Theme } from './Styles/theme';
 import Landing from './Views/Landing';
+import Instructions from './Views/Instructions';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <Route exact path="/" component={Landing} />
-        <Route path="/assessment" component={() => <h1>Hello World</h1>} />
+        <Route path="/instructions" component={Instructions} />
       </div>
     </ThemeProvider>
   );
