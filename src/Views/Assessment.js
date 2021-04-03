@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const questions = [
@@ -16,6 +16,210 @@ const questions = [
   },
   {
     num: 3,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 4,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 5,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 6,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 7,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 8,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 9,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 10,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 11,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 12,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 13,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 14,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 15,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 16,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 17,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 18,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 19,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 20,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 21,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 22,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 23,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 24,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+
+  {
+    num: 25,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+
+  {
+    num: 26,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+
+  {
+    num: 27,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 28,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+
+  {
+    num: 29,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+
+  {
+    num: 30,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+
+  {
+    num: 31,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 32,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 33,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 34,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 35,
+    names: ['e-1', 'f-1'],
+    q1: 'I want to use my creative abilities in my work.',
+    q2: 'It is especially important to me that I work with people whom I like.',
+  },
+  {
+    num: 36,
     names: ['e-1', 'f-1'],
     q1: 'I want to use my creative abilities in my work.',
     q2: 'It is especially important to me that I work with people whom I like.',
@@ -57,7 +261,16 @@ const Question = ({ num, q1, q2, names, input, handleChange }) => {
 };
 
 const Assessment = () => {
-  const [input, setInput] = useState({ 'a-1': '', 'b-1': '', 'c-1': '', 'd-1': '', 'e-1': '', 'f-1': '  ' });
+  const [input, setInput] = useState({ 'a-1': '', 'b-1': '', 'c-1': '', 'd-1': '', 'e-1': '', 'f-1': '' });
+  const [visible, setVisible] = useState(true);
+
+  const scrollControl = () => {
+    if (window.scrollY <= 6000) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  };
 
   const handleChange = (e, field, pair) => {
     const attemptedInput = ['0', '1', '2', '3'].includes(e.target.value);
@@ -92,9 +305,12 @@ const Assessment = () => {
 
     console.log(result);
   };
+  useEffect(() => {
+    window.addEventListener('scroll', scrollControl);
+  });
 
   return (
-    <StyledAssessment onSubmit={submit}>
+    <StyledAssessment visible={visible} onSubmit={submit}>
       {questions.map((x) => {
         return (
           <Question
@@ -109,7 +325,7 @@ const Assessment = () => {
         );
       })}
       <button type="submit">Submit</button>
-      {/* <div id="bottom_fade"></div> */}
+      <div id="bottom-fade"></div>
     </StyledAssessment>
   );
 };
@@ -244,13 +460,16 @@ const StyledAssessment = styled.form`
       line-height: 1.5rem;
     }
   }
-`;
 
-export default Assessment;
+  button {
+    margin: 5rem 0 10rem 0;
+  }
 
-/* 
-  #bottom_fade {
-    height: 400px;
+  #bottom-fade {
+    display: ${(props) => (props.visible ? 'block' : 'none')};
+    transition: display 0.3s ease-in-out;
+    pointer-events: none;
+    height: 300px;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -267,4 +486,7 @@ export default Assessment;
     background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 90%);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 90%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-  } */
+  }
+`;
+
+export default Assessment;
