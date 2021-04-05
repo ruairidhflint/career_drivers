@@ -47,7 +47,19 @@ const Assessment = (props) => {
       result[letter] += Number(input[x]);
     });
 
-    window.localStorage.setItem('results', JSON.stringify(result));
+    const converted = {
+      'Material Rewards': result.a,
+      'Power/Influence': result.b,
+      Meaning: result.c,
+      Expertise: result.d,
+      Creativity: result.e,
+      Affiliation: result.f,
+      Autonomy: result.g,
+      Security: result.h,
+      Status: result.i,
+    };
+
+    window.localStorage.setItem('results', JSON.stringify(converted));
     props.history.push('/loading');
   };
 
