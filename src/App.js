@@ -5,6 +5,7 @@ import { Theme } from './Styles/theme';
 import Landing from './Views/Landing';
 import Instructions from './Views/Instructions';
 import Assessment from './Views/Assessment';
+import Loading from './Views/Loading';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route path="/instructions" component={Instructions} />
         <Route path="/assessment" component={Assessment} />
+        <Route path="/loading" component={Loading} />
       </div>
     </ThemeProvider>
   );
