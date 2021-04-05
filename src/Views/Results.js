@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 const Results = (props) => {
   const [res, setRes] = useState(null);
@@ -12,11 +13,24 @@ const Results = (props) => {
       props.history.replace('/');
     }
   }, [props.history]);
+
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <StyledResults>
+      <h2>Career Driver Results</h2>
+    </StyledResults>
   );
 };
+
+const StyledResults = styled.div`
+  width: 100%;
+
+  h2 {
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+`;
 
 export default Results;
