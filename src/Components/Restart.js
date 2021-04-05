@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 const RestartBar = (props) => {
   const freshStart = () => {
-    props.setCurrent(true);
+    props.setCurrent(false);
     window.localStorage.removeItem('results');
     props.history.push('/');
   };

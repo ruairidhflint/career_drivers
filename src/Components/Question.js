@@ -22,7 +22,7 @@ export const Question = ({ num, q1, q2, names, input, handleChange }) => {
             max="3"
             name={names[1]}
             value={input[names[1]]}
-            onChange={(e) => handleChange(e, names[0], names[1])}
+            onChange={(e) => handleChange(e, names[1], names[0])}
             required
           />
           <label>{q2}</label>
