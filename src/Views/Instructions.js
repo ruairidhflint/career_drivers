@@ -37,6 +37,11 @@ const StyledInstructions = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0rem 2rem 0rem 2rem;
+
+  @media (max-width: 600px) {
+    align-items: center;
+  }
 
   @media (max-width: 720px) {
     width: 98%;
@@ -77,6 +82,11 @@ const StyledInstructions = styled.div`
     @media (max-width: 900px) {
       font-size: 1.4rem;
     }
+
+    @media (max-width: 600px) {
+      margin-bottom: 8rem;
+    }
+
     @media (max-width: 400px) {
       font-size: 1.2rem;
       line-height: 1.5rem;

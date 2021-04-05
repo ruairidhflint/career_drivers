@@ -81,6 +81,7 @@ const StyledAssessment = styled.form`
   justify-content: center;
   align-items: center;
   margin-top: 10rem;
+  padding: 0rem 1rem;
 
   .main-cont {
     display: flex;
@@ -213,7 +214,7 @@ const StyledAssessment = styled.form`
     display: ${(props) => (props.visible ? 'block' : 'none')};
     transition: display 0.3s ease-in-out;
     pointer-events: none;
-    height: 300px;
+    height: 250px;
     width: 100%;
     position: fixed;
     bottom: 0;
@@ -230,6 +231,10 @@ const StyledAssessment = styled.form`
     background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 90%);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 90%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+
+    @media (max-width: 800px) {
+      height: 90px;
+    }
   }
 `;
 
