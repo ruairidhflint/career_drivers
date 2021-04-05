@@ -4,7 +4,7 @@ import { initialState } from '../Helpers/initialState';
 import { questions } from '../Helpers/Questions';
 import { Question } from '../Components/Question';
 
-const Assessment = () => {
+const Assessment = (props) => {
   const [input, setInput] = useState(() => initialState);
   const [visible, setVisible] = useState(true);
 
@@ -47,10 +47,13 @@ const Assessment = () => {
       result[letter] += Number(input[x]);
     });
 
-    console.log(result);
+    window.localStorage.setItem('results', JSON.stringify(result));
+    props.history.push('/loading');
   };
+
   useEffect(() => {
     window.addEventListener('scroll', scrollControl);
+    return () => window.removeEventListener('scroll', scrollControl);
   });
 
   return (
