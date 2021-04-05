@@ -7,7 +7,7 @@ const Loading = (props) => {
     if (percentage < 100) {
       setTimeout(() => setPercentage(percentage + 1), 80);
     } else {
-      setTimeout(() => props.history.push('results'), 2000);
+      setTimeout(() => props.history.push({ pathname: '/results', state: { prevLocation: true } }), 2000);
       return;
     }
   }, [percentage, props.history]);

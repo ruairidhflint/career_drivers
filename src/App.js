@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Route, withRouter } from 'react-router-dom';
 import GlobalStyle from './Styles/global';
@@ -8,8 +8,10 @@ import Instructions from './Views/Instructions';
 import Assessment from './Views/Assessment';
 import Loading from './Views/Loading';
 import Results from './Views/Results';
+import RestartBar from './Components/Restart';
 
 function App(props) {
+  const [current, setCurrent] = useState(false);
   useEffect(() => {
     const data = window.localStorage.getItem('results');
     if (data) {
@@ -20,12 +22,13 @@ function App(props) {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
+      <RestartBar current={current} setCurrent={setCurrent} />
       <div className="App">
         <Route exact path="/" component={Landing} />
         <Route path="/instructions" component={Instructions} />
         <Route path="/assessment" component={Assessment} />
         <Route path="/loading" component={Loading} />
-        <Route path="/results" component={Results} />
+        <Route path="/results" render={(props) => <Results {...props} setCurrent={setCurrent} />} />
       </div>
     </ThemeProvider>
   );

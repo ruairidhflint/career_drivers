@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import ReactApexChart from 'react-apexcharts';
+import RadarChart from '../Components/Chart';
+import { driverTypeInfo } from '../Helpers/driverTypeInfo';
 
 const Results = (props) => {
   const [graphData, setGraphData] = useState(null);
   const [topThree, setTopThree] = useState([]);
+  const { prevLocation } = (props.location && props.location.state) || {};
 
   useEffect(() => {
+    if (!prevLocation) {
+      props.setCurrent(true);
+    }
     const data = window.localStorage.getItem('results');
     if (data) {
       const parsed = JSON.parse(data);
@@ -23,36 +28,51 @@ const Results = (props) => {
   }, [props.history]);
 
   return (
-    <StyledResults>
-      <h2>Career Driver Results</h2>
-      <p>
-        Generally we have two or three primary career drivers with one often head and shoulders above the rest. Below is
-        a radar graph that shows you how you scored in each of nine categories. Following that is a short break down of
-        the three areas you scored highest in.
-      </p>
-      {graphData && <RadarChart data={graphData} />}
+    <>
+      <StyledResults>
+        <h2>Career Driver Results</h2>
+        <p>
+          Generally we have two or three primary career drivers with one often head and shoulders above the rest. Below
+          is a radar graph that shows you how you scored in each of nine categories. Following that is a short break
+          down of the three areas you scored highest in.
+        </p>
+        {graphData && <RadarChart data={graphData} />}
 
-      <h3>Top 3 Drivers</h3>
-      <ul>
-        {topThree &&
-          topThree.map((driver) => {
-            return (
-              <li>
-                {driver[0]} -{' '}
-                <span>
-                  Those people who do not fulfil their career drivers are likely to find it difficult to be motivated at
-                  work. Wise individuals will ensure that their primary career drivers are satisfied.
-                </span>
-              </li>
-            );
-          })}
-      </ul>
-    </StyledResults>
+        <h3>Top 3 Drivers</h3>
+        <ul>
+          {topThree &&
+            topThree.map((driver, i) => {
+              return (
+                <li key={i}>
+                  {driver[0]} - <span>{driverTypeInfo[driver[0]]}</span>
+                </li>
+              );
+            })}
+        </ul>
+
+        <h3>Next Steps</h3>
+        <p>
+          Having access to this kind of information is interesting but what is the next step? Look at the three key
+          drivers you have scored on and ask yourself the following three questions. Taking a few minutes to write down
+          a thoughtful but succinct anwser will be of huge benefit to both your personal and professional life.
+        </p>
+        <h4>- Are you surprised by your results? Why?</h4>
+        <h4>- What do you think are the key strengths and weaknesses of each of your drivers?</h4>
+        <h4>- Does your current role currently fulfil your drivers? Expand on your answer.</h4>
+
+        <p>
+          As our lives and careers progres what we value most can change. Years of financial hardship can lead to
+          Material Rewards and Security being prioritised. This can change over time so it is always a good idea to take
+          note of your results and compare them to a new set of results in a years time.
+        </p>
+      </StyledResults>
+    </>
   );
 };
 
 const StyledResults = styled.div`
   width: 100%;
+  margin-bottom: 10rem;
 
   h2 {
     font-size: 4rem;
@@ -67,7 +87,16 @@ const StyledResults = styled.div`
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 3rem;
+    margin-bottom: 2.7rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+    width: 100%;
+    font-weight: bold;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
   }
 
   p {
@@ -81,7 +110,7 @@ const StyledResults = styled.div`
   ul {
     width: 60%;
     margin: 0 auto;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
   }
   li {
     font-size: 2.3rem;
@@ -94,75 +123,3 @@ const StyledResults = styled.div`
 `;
 
 export default Results;
-
-const RadarChart = ({ data }) => {
-  const state = {
-    series: [
-      {
-        name: '',
-        data: [
-          data['Material Rewards'],
-          data['Power/Influence'],
-          data['Meaning'],
-          data['Expertise'],
-          data['Creativity'],
-          data['Affilitation'],
-          data['Autonomy'],
-          data['Security'],
-          data['Status'],
-        ],
-      },
-    ],
-    options: {
-      chart: {
-        height: 500,
-        type: 'radar',
-        zoom: {
-          enabled: false,
-        },
-        toolbar: {
-          show: false,
-        },
-      },
-      // stroke: {
-      //   show: true,
-      //   width: 3,
-      //   colors: ['#808080'],
-      //   dashArray: 0,
-      // },
-      // fill: {
-      //   opacity: 0.3,
-      //   colors: ['#292929'],
-      // },
-      // markers: {
-      //   style: 'inverted',
-      //   size: 0,
-      // },
-      title: {
-        text: undefined,
-      },
-      xaxis: {
-        categories: [
-          'Material Rewards',
-          'Power/Influence',
-          'Meaning',
-          'Expertise',
-          'Creativity',
-          'Affiliation',
-          'Autonomy',
-          'Security',
-          'Status',
-        ],
-      },
-      // yaxis: {
-      //   show: false,
-      // },
-    },
-  };
-
-  return (
-    // <div style={{ border: '1px solid red' }}>
-    <ReactApexChart options={state.options} series={state.series} type="radar" height={600} />
-    // </div>
-  );
-};
