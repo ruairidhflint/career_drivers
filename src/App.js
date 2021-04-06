@@ -7,14 +7,14 @@ import { Theme } from './Styles/theme';
 
 import { Landing, Instructions, Assessment, Loading, Results, RestartBar } from './Views';
 
-function App(props) {
+function App({ history }) {
   const [current, setCurrent] = useState(false);
   useEffect(() => {
     const data = window.localStorage.getItem('results');
     if (data) {
-      props.history.replace('results');
+      history.replace('results');
     }
-  }, [props.history]);
+  }, [history]);
 
   return (
     <ThemeProvider theme={Theme}>

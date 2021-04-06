@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import RadarChart from '../Components/Chart';
 import { driverTypeInfo } from '../Helpers/driverTypeInfo';
 
-const Results = (props) => {
+const Results = ({ history, location, setCurrent }) => {
   const [graphData, setGraphData] = useState(null);
   const [topThree, setTopThree] = useState([]);
-  const { prevLocation } = (props.location && props.location.state) || {};
+  const { prevLocation } = (location && location.state) || {};
 
   useEffect(() => {
     if (!prevLocation) {
-      props.setCurrent(true);
+      setCurrent(true);
     }
     const data = window.localStorage.getItem('results');
     if (data) {
@@ -23,9 +23,9 @@ const Results = (props) => {
           .slice(0, 3),
       );
     } else {
-      props.history.replace('/');
+      history.replace('/');
     }
-  }, [props.history]);
+  }, [history, prevLocation, setCurrent]);
 
   return (
     <>
