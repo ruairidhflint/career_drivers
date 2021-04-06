@@ -100,7 +100,7 @@ const StyledResults = styled.div`
   }
 
   p {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     font-size: 1.8rem;
     padding: 2rem 0;
@@ -108,7 +108,7 @@ const StyledResults = styled.div`
   }
 
   ul {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 5rem;
   }
