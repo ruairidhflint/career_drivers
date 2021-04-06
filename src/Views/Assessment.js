@@ -223,6 +223,14 @@ const StyledAssessment = styled.form`
 
   button {
     margin: 5rem 0 10rem 0;
+    border-radius: 0;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    box-shadow: none;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
   }
 
   #bottom-fade {
