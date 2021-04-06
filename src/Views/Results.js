@@ -92,11 +92,13 @@ const StyledResults = styled.div`
 
   h4 {
     font-size: 2rem;
-    width: 100%;
     font-weight: bold;
     width: 60%;
     margin: 0 auto;
     margin-top: 2.5rem;
+    @media (max-width: 970px) {
+      width: 85%;
+    }
   }
 
   p {
@@ -105,12 +107,19 @@ const StyledResults = styled.div`
     font-size: 1.8rem;
     padding: 2rem 0;
     line-height: 2.2rem;
+
+    @media (max-width: 970px) {
+      width: 95%;
+    }
   }
 
   ul {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 5rem;
+    @media (max-width: 970px) {
+      width: 95%;
+    }
   }
   li {
     font-size: 2.3rem;

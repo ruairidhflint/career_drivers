@@ -1,4 +1,5 @@
 import ReactApexChart from 'react-apexcharts';
+import styled from 'styled-components';
 
 const RadarChart = ({ data }) => {
   const state = {
@@ -20,7 +21,6 @@ const RadarChart = ({ data }) => {
     ],
     options: {
       chart: {
-        height: 500,
         type: 'radar',
         zoom: {
           enabled: false,
@@ -50,7 +50,31 @@ const RadarChart = ({ data }) => {
       },
     },
   };
-  return <ReactApexChart options={state.options} series={state.series} type="radar" height={600} />;
+  return (
+    <StyledGraphContainer>
+      <ReactApexChart options={state.options} series={state.series} type="radar" />
+    </StyledGraphContainer>
+  );
 };
 
 export default RadarChart;
+
+const StyledGraphContainer = styled.div`
+  width: 70%;
+  margin: 0 auto;
+
+  @media (max-width: 1200px) {
+    width: 80%;
+  }
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+`;

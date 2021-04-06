@@ -31,10 +31,23 @@ const StyledReset = styled.div`
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 680px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 500px) {
+    height: 50px;
+    font-size: 1rem;
+  }
+
   .holding {
     width: 550px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 680px) {
+      width: 500px;
+      padding: 0 2rem;
+    }
   }
 
   span {
