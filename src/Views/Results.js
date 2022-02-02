@@ -33,8 +33,8 @@ const Results = ({ history, location, setCurrent }) => {
         <h2>Career Driver Results</h2>
         <p>
           Generally we have two or three primary career drivers with one often head and shoulders above the rest. Below
-          is a radar graph that shows you how you scored in each of nine categories. Following that is a short break
-          down of the three areas you scored highest in.
+          is a radar graph that shows you how you scored in each of nine categories. Following the graph is a short
+          breakdown of the three areas you scored highest in.
         </p>
         {graphData && <RadarChart data={graphData} />}
 
@@ -49,21 +49,20 @@ const Results = ({ history, location, setCurrent }) => {
               );
             })}
         </ul>
-
         <h3>Next Steps</h3>
         <p>
           Having access to this kind of information is interesting but what is the next step? Look at the three key
-          drivers you have scored on and ask yourself the following three questions. Taking a few minutes to write down
-          a thoughtful but succinct anwser will be of huge benefit to both your personal and professional life.
+          drivers you have scored hgihest on and ask yourself the following three questions. Take a few minutes to write
+          down a thoughtful but succinct anwser to each will be of huge benefit to both your personal and professional
+          life.
         </p>
         <h4>- Are you surprised by your results? Why?</h4>
         <h4>- What do you think are the key strengths and weaknesses of each of your drivers?</h4>
         <h4>- Does your current role currently fulfil your drivers? Expand on your answer.</h4>
-
         <p>
-          As our lives and careers progres what we value most can change. Years of financial hardship can lead to
-          Material Rewards and Security being prioritised. This can change over time so it is always a good idea to take
-          note of your results and compare them to a new set of results in a years time.
+          As our lives and careers progress what we most value can change. Years of financial hardship can lead to
+          Material Rewards and Security being prioritised. It is a good idea to take note of your results and compare
+          them to a new set of results in a years time.
         </p>
       </StyledResults>
     </>

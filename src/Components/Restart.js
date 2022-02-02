@@ -12,7 +12,7 @@ const RestartBar = (props) => {
   return (
     <StyledReset current={props.current}>
       <div className="holding">
-        <p>These are your previously saved results. Would you like to start fresh?</p>{' '}
+        <p>These are your previously saved results. Would you like to start fresh?</p>
         <div>
           <span onClick={freshStart}>Yes</span> / <span onClick={closeBar}>No</span>
         </div>

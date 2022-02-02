@@ -38,7 +38,7 @@ export const questions = [
   {
     num: 7,
     names: ['d-2', 'e-2'],
-    q1: 'I want to feel that I have gained a hard - won expertise.',
+    q1: 'I want to feel that I have gained a hard-won expertise.',
     q2: 'I want to create things which people associate with being my own.',
   },
   {

@@ -22,7 +22,7 @@ const Landing = () => {
       <StyledInfoContainer ref={infoRef}>
         <p>
           Research in career development suggests that we all have one or two primary key values that motivate us. These
-          are referred to as our ‘Career Drivers’. Rarely are they intellectually or conciously decided - they are the
+          are referred to as our ‘Career Drivers’. Rarely are they intellectually or consciously decided - they are the
           product of powerful internal factors formed by both nature and nurture.
         </p>
         <p>
@@ -38,7 +38,7 @@ const Landing = () => {
         </p>
         <p>
           This assessment provides a simple and short framework to understand what are your career drivers and hopefully
-          some clarity as to what a future path towards fullfillment will look like.
+          some clarity as to what a future path towards fulfillment will look like.
         </p>
         <Link to="/instructions">Take the Assessment →</Link>
       </StyledInfoContainer>

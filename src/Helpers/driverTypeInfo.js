@@ -2,7 +2,7 @@ export const driverTypeInfo = {
   'Material Rewards':
     'Generally are seeking possessions, wealth and a high standard of living. Salary or potential salary is one of the most important details on a job advert.',
   'Power/Influence':
-    'Most likely to want to be in control of people and resources to best be satisfied in their career. Often seek senior and dominant roles with a company.',
+    'Most likely to want to be in control of people and resources to be satisfied in their career. Often seek senior and dominant roles within a company.',
   Meaning:
     'Always seeking to do things that they believe are valuable in and of themselves. The why is a lot more important than the who, what and how.',
   Expertise:
